@@ -32,6 +32,7 @@
             { 
                 Console.WriteLine("Несовершеннолетний"); 
             }
+            Console.ReadKey();
         }
     }
 }

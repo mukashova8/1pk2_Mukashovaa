@@ -10,6 +10,7 @@
             double c = Math.PI / 4;
             double f = (Math.Pow(b + Math.Pow(a - 1, 1 / 3), 1 / 4)) / (Math.Abs(a - b) * (Math.Sin(Math.Pow(c,2))) + Math.Tan(c));
             Console.WriteLine(f);
+            Console.ReadKey();
         }
     }
 }
