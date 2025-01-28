@@ -10,31 +10,31 @@
             //сообщение что матрица не является диагональной.
 
             //создание квадратного массива и проверка ввода
-            int n; bool b = true;
+            int n; bool w = true;
             Random rnd = new Random();
             Console.WriteLine("введите длину массива");
             while (!int.TryParse(Console.ReadLine(), out n))
             {
-                Console.WriteLine("ошибка ввода");
+                Console.WriteLine("ошибка ввода, введите снова");
             }
             int[,] arrey = new int[n, n];
             for (int i = 0; i < arrey.GetLength(0); i++)
             {
                 for (int j = 0; j < arrey.GetLength(1); j++)
                 {
-                    arrey[i, j] = rnd.Next(0, 2); //если 2 заменить на 1 работает все 
+                    arrey[i, j] = rnd.Next(0, 2); 
                 }
             }
-            //задача 
+            //проверка условия задачи
             for (int i = 0; i < arrey.GetLength(0); i++)
             {
                 for (int j = 0; j < arrey.GetLength(1); j++)
                 {
                     if (i != j & arrey[i, j] != 0)
-                        b = false;
+                        w = false;
                 }
             }
-            if (b == true)
+            if (w == true)
             {
 
                 for (int i = 0; i < arrey.GetLength(0); i++)
