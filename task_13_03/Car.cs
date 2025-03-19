@@ -50,7 +50,7 @@ namespace task_13_03
             StopCar();
         }
 
-        public void StopCar()
+        private void StopCar()
         {
             Console.WriteLine("Торможение: Автомобиль остановлен из-за превышения скорости");
             while (Speed != 0)
