@@ -55,7 +55,7 @@ namespace task_20_06
                 }
                 else if (key == "\r")
                 {
-                    Thread.Sleep(1000);
+                    Thread.Sleep(3000);
 
                     switch (Color)
                     {
