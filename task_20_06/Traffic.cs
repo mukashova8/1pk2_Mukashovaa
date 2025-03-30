@@ -10,7 +10,7 @@ namespace task_20_06
     internal class Traffic
     {
         public TrafficLightColor Color { get; private set; } = TrafficLightColor.Red;
-        private bool autoMode = true; // Флаг для автоматического режима
+        private bool autoMode = true; 
 
         public void AutoSwitch()
         {
@@ -18,10 +18,9 @@ namespace task_20_06
 
             while (autoMode)
             {
-                // Проверяем, была ли нажата клавиша, без блокировки выполнения
                 if (Console.KeyAvailable)
                 {
-                    var key = Console.ReadKey(true).Key; // Считываем клавишу
+                    var key = Console.ReadKey(true).Key; 
                     if (key == ConsoleKey.Q)
                     {
                         autoMode = false;
@@ -29,9 +28,9 @@ namespace task_20_06
                     }
                 }
 
-                Thread.Sleep(3000); // Задержка 3 секунды перед сменой цвета
+                Thread.Sleep(3000); 
 
-                // Переключение цвета
+              
                 switch (Color)
                 {
                     case TrafficLightColor.Red:
