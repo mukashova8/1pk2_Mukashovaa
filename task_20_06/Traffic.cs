@@ -9,71 +9,61 @@ namespace task_20_06
     internal class Traffic
     {
         public TrafficLightColor Color { get; private set; } = TrafficLightColor.Red;
-        bool autoMode = true;
+        bool time = true;
 
-        public void AutoSwitch()
+        public void AftoSwitch()
         {
-            Console.WriteLine("Автоматический режим: Нажмите Q для выхода");
-            while (autoMode)
+
+            Console.WriteLine("Нажмите Q для выхода");
+            while (time)
             {
+
                 Thread.Sleep(3000);
 
                 switch (Color)
                 {
                     case TrafficLightColor.Red:
-                        Color = TrafficLightColor.Green;
-                        break;
+                        Color = TrafficLightColor.Green; break;
                     case TrafficLightColor.Green:
-                        Color = TrafficLightColor.Yellow;
-                        break;
+                        Color = TrafficLightColor.Yellow; break;
                     case TrafficLightColor.Yellow:
-                        Color = TrafficLightColor.Red;
-                        break;
+                        Color = TrafficLightColor.Red; break;
                 }
-
                 Console.WriteLine($"Свет: {Color}");
-
-                var key = Console.ReadKey(true).KeyChar.ToString();
+                var key = Console.ReadLine();
                 if (key == "Q")
                 {
-                    autoMode = false;
+                    time = false;
                 }
+
+
             }
         }
-
-        public void ManualSwitch()
+        public void Switch()
         {
-            Console.WriteLine("Ручной режим: Нажмите Enter для смены цвета, Q для выхода");
-
-            while (!autoMode)
+            Console.WriteLine("Нажмите enter для смены цвета");
+            var key = Console.ReadLine();
+            while (time)
             {
-                var key = Console.ReadKey(true).KeyChar.ToString();
-
-                if (key == "Q")
-                {
-                    break;
-                }
-                else if (key == "\r")
+                if (key == "")
                 {
                     Thread.Sleep(3000);
-
                     switch (Color)
                     {
                         case TrafficLightColor.Red:
-                            Color = TrafficLightColor.Green;
-                            break;
+                            Color = TrafficLightColor.Green; break;
                         case TrafficLightColor.Green:
-                            Color = TrafficLightColor.Yellow;
-                            break;
+                            Color = TrafficLightColor.Yellow; break;
                         case TrafficLightColor.Yellow:
-                            Color = TrafficLightColor.Red;
-                            break;
+                            Color = TrafficLightColor.Red; break;
                     }
 
                     Console.WriteLine($"Свет: {Color}");
+
                 }
+
             }
         }
-
     }
 }
+
