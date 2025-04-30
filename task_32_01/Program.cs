@@ -8,10 +8,11 @@
             List<Obstacle> obstacles = new List<Obstacle>
             {
                 new Hare(),
+                new Pit(),  // Новое препятствие
                 new Wolf(),
+                new Tree(), // Новое препятствие
                 new Bear(),
                 new Wall(), // Новое препятствие
-                new Pit(),  // Новое препятствие
                 new Fox()
             };
 

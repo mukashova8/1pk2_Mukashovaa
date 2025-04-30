@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace task_32_01
 {
-    public class Pit : Obstacle
+    public class Tree : Obstacle
     {
-        public Pit() : base("Яма")
+        public Tree() : base("Дерево")
         {
         }
 
         public override void InteractWith(Kolobok kolobok)
         {
-            Console.WriteLine($"Колобок наткнулся о {Name} и потерял скорость.");
+            Console.WriteLine($"Колобок провалился в {Name} и потерял скорость.");
             kolobok.Speed /= 2; // Затормаживание
         }
     }
