@@ -15,7 +15,7 @@ namespace task_32_01
         public Kolobok()
         {
             Position = 0;
-            Speed = 5;
+            Speed = 8;
             IsAlive = true;
         }
 
