@@ -18,10 +18,11 @@
                 <MenuItem Header="Сохранить" Click="SaveFileButton_Click"></MenuItem>
             </MenuItem>
         </Menu>
-
-        <ListBox x:Name ="productList" Grid.Row="1" ItemsSource="{Binding Products}">
-            <TextBlock FontWeight="Bold" TextDecorations="Underline" Text="Список продуктов" />
-        </ListBox>
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+        <TextBlock  FontWeight="Bold" TextDecorations="Underline" Text="Список продуктов" />
+            <ListBox x:Name ="productList" Grid.Row="1" ItemsSource="{Binding products}">
+            </ListBox>
+        </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal">
             <TextBox x:Name="InputTextBox" Width="280"></TextBox>
             <Button x:Name="AddButton" Content="Добавить" Click="AddButton_Click" Width="70"></Button>

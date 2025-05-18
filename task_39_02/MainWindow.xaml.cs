@@ -55,7 +55,6 @@ namespace task_39_02
                         }
                     }
                     MessageBox.Show("Список успешно сохранен!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
-
                 }
             }
             catch (Exception ex)
@@ -65,11 +64,7 @@ namespace task_39_02
                     MessageBoxButton.YesNoCancel,
                     MessageBoxImage.Warning);
             }
-
-
-        }
-
-       
+        } 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             try
